@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decide My Day ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="rain-video" autoplay muted loop class="background-video" style="display: none;">
+        <source src="videos/RainVisual.mp4" type="video/mp4">
+    </video>
+    <img id="background-image" style="display: none;" src="Images/Sleep.jpg">
+
+    <!-- 音频标签（隐藏） -->
+    <audio id="rain-sound" loop>
+        <source src="sounds/RainSound.m4a" type="audio/mpeg">
+    </audio>
+    
+    <div id="app">
+        <!-- 初始画面 -->
+        <div id="start-screen" class="screen">
+            <h1>Help me Define an Efficient Day！</h1>
+            <p>You are going to face a list of options, which I will actually do it...</p>
+            <button id="start-btn">START</button>
+        </div>
+
+        <!-- 选择画面（默认隐藏） -->
+        <div id="choice-screen" class="screen hidden">
+            <div class="scene-text">这里是情景描述文本...</div>
+            <div class="choices">
+                <button class="choice-btn" data-next="pathA">选项A</button>
+                <button class="choice-btn" data-next="pathB">选项B</button>
+            </div>
+        </div>
+
+        <!-- 结局画面（默认隐藏） -->
+        <div id="end-screen" class="screen hidden">
+            <img src="" alt="结局图片" id="end-image">
+            <p id="end-text">这里是结局文本...</p>
+            <button id="restart-btn">Start Over</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
